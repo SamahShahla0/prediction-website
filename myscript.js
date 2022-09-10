@@ -9,8 +9,7 @@ async function getapi(url) {
 
     // Storing data in form of JSON
     var data = await response.json();
-    console.log(data);
-    return data.age;
+    return data;
 }
 
 window.addEventListener = ('load', getDogResult())
@@ -42,12 +41,40 @@ submit_button.onclick =
         const getAge= () => {
             age.then((a) => {
                 console.log(a);
-                results = results + "Predicted age is: " +a;
+                results = results +"\n"+ "Predicted age is: " +a.age;
                 console.log(results);
 
             });
         };
         getAge();
+
+
+        const api_url2 = "https://api.genderize.io/?name="+new_name;
+        const gender = getapi(api_url2);
+        const getGender= () => {
+            gender.then((a) => {
+                console.log(a);
+                results = results +"\n" + "Predicted gender is: " +a.gender;
+                console.log(results);
+
+            });
+        };
+        getGender();
+
+
+        const api_url3 = "https://api.nationalize.io/?name="+new_name;
+        const nationality = getapi(api_url3);
+        const getNationality= () => {
+            nationality.then((a) => {
+                console.log(a);
+                results = results +"\n" + "Predicted nationality: " +a.country[0].country_id + " or " + a.country[1].country_id ;
+                console.log(results);
+
+            });
+        };
+        getNationality();
+
+
 
 
 
