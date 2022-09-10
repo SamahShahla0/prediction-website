@@ -5,5 +5,8 @@ const submit_button = documnet.getElementById('submit-btn')
 
 
 window.onload = (event) => {
-    console.log('page is fully loaded');
+    function getRandomdog(){
+        fetch('https://dog.ceo/api/breeds/image/random')
+        
+    };
   };
