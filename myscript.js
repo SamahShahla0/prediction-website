@@ -11,7 +11,4 @@ function getDogResult() {
         .then(data => {
             dogResult.innerHTML = `<img id="fetched-image" src="${data.message}"/>`
         })
-    var fetched_image = document.getElementById('fetched-image').width="300";
-    console.log('fetched_image')
-    
 };
