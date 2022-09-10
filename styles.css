@@ -21,7 +21,7 @@ body{
     justify-content: center;
     margin: 10px;
     height: 400px;
-    width: 500px;
+    width: 50vw;
 }
 
 .btns{
@@ -35,7 +35,7 @@ body{
     font-size: 20px;
     padding: 10px;
     margin: 10px;
-    width: 300px;
+    width: 20vw;
 }
 
 button:active{
@@ -57,4 +57,9 @@ button:focus{
     font-size: 28px;
     font-weight: 700;
     text-shadow:1px 1px 10px rgb(148, 33, 119), 1px 1px 10px rgb(255, 226, 171);
+}
+
+#name{
+    height: 5vh;
+    margin: 20px;
 }
