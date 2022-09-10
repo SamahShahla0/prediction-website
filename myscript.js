@@ -14,8 +14,10 @@ function getDogResult() {
 };
 
 submit_button.onclick =
-    function getAllData() {
+    function getInputValue() {
         console.log("button clicked")
+        var input_text = document.querySelector('#iname')
+        console.log(input_text.value)
     
     }
 
