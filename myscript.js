@@ -9,7 +9,8 @@ async function getapi(url) {
 
     // Storing data in form of JSON
     var data = await response.json();
-    console.log(data);
+    console.log(data.name);
+    //console.log(data_name);
 }
 
 window.addEventListener = ('load', getDogResult())
@@ -32,13 +33,16 @@ function getDogResult() {
 submit_button.onclick =
     function getInputValue() {
         var input_text = document.querySelector('#iname');
-        console.log(input_text.value);
+        new_name = input_text.value;
+        console.log(new_name);
+        
+    
+
+        const api_url = 
+        "https://api.agify.io/?name=nour";
+
+        getapi(api_url);
     };
-
-    const api_url = 
-      "https://api.agify.io/?name=input_text.value";
-
-     getapi(api_url);
 
     
 
