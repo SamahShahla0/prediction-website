@@ -9,7 +9,7 @@ function getDogResult() {
     fetch('https://dog.ceo/api/breeds/image/random')
         .then(res => res.json())
         .then(data => {
-            if ('${data.status}' == "success") {
+            if (data.status == "success") {
                 dogResult.innerHTML = `<img src="${data.message}"/>`
             }
             else {
