@@ -15,13 +15,11 @@ body{
 }
 
 .dog-img-div{
-    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10px;
-    height: 400px;
-    width: 50vw;
+    object-fit: fill;
 }
 
 .btns{

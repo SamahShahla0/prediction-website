@@ -9,6 +9,9 @@ function getDogResult() {
     fetch('https://dog.ceo/api/breeds/image/random')
         .then(res => res.json())
         .then(data => {
-            dogResult.innerHTML = `<img src="${data.message}"/>`
+            dogResult.innerHTML = `<img id="fetched-image" src="${data.message}"/>`
         })
+    var fetched_image = document.getElementById('fetched-image').width="300";
+    console.log('fetched_image')
+    
 };
