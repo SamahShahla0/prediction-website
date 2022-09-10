@@ -42,3 +42,6 @@ button:active{
     transform: scale(0.80);
 }
 
+button:focus{
+    outline: none;
+}
