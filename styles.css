@@ -66,4 +66,5 @@ button:focus{
 @media screen and (max-width: 480px) {
   .container {flex-direction: column;}
   .btns{font-size: 15px;}
+  #dog-img{width:30vw;}
 }
