@@ -9,7 +9,12 @@ function getDogResult() {
     fetch('https://dog.ceo/api/breeds/image/random')
         .then(res => res.json())
         .then(data => {
-            dogResult.innerHTML = `<img src="${data.message}"/>`
+            if data.status == "success" {
+                dogResult.innerHTML = `<img src="${data.message}"/>`
+            }
+            else {
+                alert("error, can't find image")
+            }
         })
 };
 
@@ -18,7 +23,9 @@ submit_button.onclick =
         console.log("button clicked")
         var input_text = document.querySelector('#iname')
         console.log(input_text.value)
+
+
     
-    }
+}
 
 
