@@ -1,12 +1,14 @@
-const dog_result = document.getElementById('dog-result')
-const entered_name = document.getElementById('name')
-const submit_button = documnet.getElementById('submit-btn')
+const dogResult = document.getElementById('dog-result')
+const enteredName = document.getElementById('name')
+//const submit_button = documnet.getElementById('submit-btn')
+window.addEventListener = ('load', getDogResult())
 
 
-
-window.onload = (event) => {
-    function getRandomdog(){
-        fetch('https://dog.ceo/api/breeds/image/random')
-        
-    };
-  };
+function getDogResult() {
+    console.log('page is fully loaded');
+    fetch('https://dog.ceo/api/breeds/image/random')
+        .then(res => res.json())
+        .then(data => {
+            dogResult.innerHTML = `<img src="${data.message}"/>`
+        })
+};
