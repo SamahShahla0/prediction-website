@@ -38,7 +38,7 @@ submit_button.onclick =
         const age = getapi(api_url1);
         const getAge= () => {
             age.then((a) => {
-                results = results +"\n"+ "Predicted age is: " +a.age;
+                results = results + "Predicted age is: " +a.age;
             });
         };
 
@@ -49,7 +49,7 @@ submit_button.onclick =
         const gender = getapi(api_url2);
         const getGender= () => {
             gender.then((a) => {
-                results = results +"\n" + "Predicted gender is: " +a.gender;
+                results = results +"\n" + "Predicted gender is: " +a.gender + "with probability: " + a.probability;
             });
         };
 
@@ -60,22 +60,14 @@ submit_button.onclick =
         const nationality = getapi(api_url3);
         const getNationality= () => {
             nationality.then((a) => {
-                results = results +"\n" + "Predicted nationality: " +a.country[0].country_id + " or " + a.country[1].country_id ;
+                results = results +"\n" + "Predicted nationality: " +a.country[0].country_id + "with probability: " + a.country[0].probability + " or " + a.country[1].country_id + "with probability: " + a.country[1].probability;
                 console.log(results);
 
             });
         };
         getNationality();
 
-        const output = document.createElement("p");
-        output.innerText = results;
-
-        const element = document.getElementById("container");
-        element.appendChild(output);
-
-
-
-
+       
     };
 
     
