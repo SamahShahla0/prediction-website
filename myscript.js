@@ -73,6 +73,7 @@ submit_button.onclick =
             });
         };
         getNationality();
+        const output = document.createElement("p");
         
 
 
