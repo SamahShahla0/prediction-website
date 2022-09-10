@@ -74,6 +74,8 @@ submit_button.onclick =
         };
         getNationality();
 
+        
+
 
 
 
