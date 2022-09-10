@@ -1,6 +1,6 @@
-const dogResult = document.getElementById('dog-result')
-const enteredName = document.getElementById('name')
-const submit_button = document.getElementById('submit-btn')
+const dogResult = document.getElementById('dog-result');
+const enteredName = document.getElementById('name');
+const submit_button = document.getElementById('submit-btn');
 
 window.addEventListener = ('load', getDogResult())
 
@@ -13,15 +13,10 @@ function getDogResult() {
         })
 };
 
-submit_button.addEventListener('click',getAllData())
+submit_button.onclick =
+    function getAllData() {
+        console.log("button clicked")
+    
+    }
 
-function getAllData(){
-    function getGender() {
-        console.log('page is fully loaded');
-        fetch('https://api.genderize.io/?name=rio')
-            .then(res => res.json())
-            .then(data => {
-                dogResult.innerHTML = `<img src="${data.message}"/>`
-            })
-    };
-}
+
