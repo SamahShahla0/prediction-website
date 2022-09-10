@@ -19,7 +19,6 @@ function getDogResult() {
     fetch('https://dog.ceo/api/breeds/image/random')
         .then(res => res.json())
         .then(data => {
-            console.log(data.status);
             if (data.status == "success") {
                 dogResult.innerHTML = `<img src="${data.message}"/>`;
             }
@@ -34,18 +33,15 @@ submit_button.onclick =
         var results="";
         var input_text = document.querySelector('#iname');
         new_name = input_text.value;
-        console.log(new_name);
 
         const api_url1 = "https://api.agify.io/?name="+new_name;
         const age = getapi(api_url1);
         const getAge= () => {
             age.then((a) => {
-                console.log(a);
                 results = results +"\n"+ "Predicted age is: " +a.age;
-                console.log(results);
-
             });
         };
+
         getAge();
 
 
@@ -53,12 +49,10 @@ submit_button.onclick =
         const gender = getapi(api_url2);
         const getGender= () => {
             gender.then((a) => {
-                console.log(a);
                 results = results +"\n" + "Predicted gender is: " +a.gender;
-                console.log(results);
-
             });
         };
+
         getGender();
 
 
@@ -66,16 +60,18 @@ submit_button.onclick =
         const nationality = getapi(api_url3);
         const getNationality= () => {
             nationality.then((a) => {
-                console.log(a);
                 results = results +"\n" + "Predicted nationality: " +a.country[0].country_id + " or " + a.country[1].country_id ;
                 console.log(results);
 
             });
         };
         getNationality();
-        const output = document.createElement("p");
-        
 
+        const output = document.createElement("p");
+        output.innerText = results;
+
+        const element = document.getElementById("container");
+        element.appendChild(output);
 
 
 
