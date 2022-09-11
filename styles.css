@@ -13,6 +13,7 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    padding-top: 4%;
 }
 
 .dog-img-div{
@@ -56,6 +57,15 @@ button:focus{
     font-size: 28px;
     font-weight: 700;
     text-shadow:1px 1px 10px rgb(148, 33, 119), 1px 1px 10px rgb(255, 226, 171);
+}
+
+.output-para{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+    padding-top: 0%;
+
 }
 
 #iname{

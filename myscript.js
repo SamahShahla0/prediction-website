@@ -40,7 +40,7 @@ submit_button.onclick =
         const age = getapi(api_url1);
         const getAge= () => {
             age.then((a) => {
-                results = results + "Predicted age is: " +a.age;
+                results = "\nPredicted age is: " +a.age + "\n";
                 var y = document.createTextNode(results);
                 output_results.appendChild(y);
                
@@ -54,7 +54,7 @@ submit_button.onclick =
         const gender = getapi(api_url2);
         const getGender= () => {
             gender.then((a) => {
-                results = "\n" + "Predicted gender is: " +a.gender + " with probability: " + a.probability;
+                results =  "\nPredicted gender is: " +a.gender + " with probability: " + a.probability;
                 var x = document.createTextNode(results);
                 output_results.appendChild(x);
                 
@@ -68,13 +68,11 @@ submit_button.onclick =
         const nationality = getapi(api_url3);
         const getNationality= () => {
             nationality.then((a) => {
-                results =  "\n" + "Predicted nationality: " +a.country[0].country_id + " with probability: " + a.country[0].probability + " or " + a.country[1].country_id + " with probability: " + a.country[1].probability;
+                results =   "\nPredicted nationality: " +a.country[0].country_id + " with probability: " + a.country[0].probability + " or " + a.country[1].country_id + " with probability: " + a.country[1].probability;
                 var z = document.createTextNode(results);
                 output_results.appendChild(z);
-                console.log(output_results);
                 output_results.classList.add("text-style");
-                output_results.classList.add("container");
-                console.log(output_results.classList);
+                output_results.classList.add("output-para");
                 document.body.appendChild(output_results);
 
             });
