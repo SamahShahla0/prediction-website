@@ -72,6 +72,7 @@ submit_button.onclick =
                 var z = document.createTextNode(results);
                 output_results.appendChild(z);
                 console.log(output_results);
+                output_results.classList.add("text-style");
                 document.body.appendChild(output_results);
 
             });

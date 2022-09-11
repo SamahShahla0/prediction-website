@@ -52,7 +52,7 @@ button:focus{
     justify-content: center;
 }
 
-#label-text{
+.text-style{
     font-size: 28px;
     font-weight: 700;
     text-shadow:1px 1px 10px rgb(148, 33, 119), 1px 1px 10px rgb(255, 226, 171);
@@ -68,6 +68,6 @@ button:focus{
   .container {flex-direction: column;}
   .btns{font-size: 15px;}
   #dog-img{width:20vw;}
-  #label-text{font-size: smaller;}
+  .text-style{font-size: smaller;}
 
 }
