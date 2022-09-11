@@ -73,6 +73,8 @@ submit_button.onclick =
                 output_results.appendChild(z);
                 console.log(output_results);
                 output_results.classList.add("text-style");
+                output_results.classList.add("container");
+                console.log(output_results.classList);
                 document.body.appendChild(output_results);
 
             });
