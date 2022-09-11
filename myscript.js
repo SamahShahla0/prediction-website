@@ -29,8 +29,10 @@ function getDogResult() {
 };
 
 submit_button.onclick =
-    function getInputValue() {
+    function getResults() {
         var results="";
+        const output_results = document.createElement("p")
+
         var input_text = document.querySelector('#iname');
         new_name = input_text.value;
 
@@ -39,6 +41,9 @@ submit_button.onclick =
         const getAge= () => {
             age.then((a) => {
                 results = results + "Predicted age is: " +a.age;
+                var y = document.createTextNode(results);
+                output_results.appendChild(y);
+               
             });
         };
 
@@ -49,7 +54,10 @@ submit_button.onclick =
         const gender = getapi(api_url2);
         const getGender= () => {
             gender.then((a) => {
-                results = results +"\n" + "Predicted gender is: " +a.gender + "with probability: " + a.probability;
+                results = "\n" + "Predicted gender is: " +a.gender + " with probability: " + a.probability;
+                var x = document.createTextNode(results);
+                output_results.appendChild(x);
+                
             });
         };
 
@@ -60,12 +68,17 @@ submit_button.onclick =
         const nationality = getapi(api_url3);
         const getNationality= () => {
             nationality.then((a) => {
-                results = results +"\n" + "Predicted nationality: " +a.country[0].country_id + "with probability: " + a.country[0].probability + " or " + a.country[1].country_id + "with probability: " + a.country[1].probability;
-                console.log(results);
+                results =  "\n" + "Predicted nationality: " +a.country[0].country_id + " with probability: " + a.country[0].probability + " or " + a.country[1].country_id + " with probability: " + a.country[1].probability;
+                var z = document.createTextNode(results);
+                output_results.appendChild(z);
+                console.log(output_results);
+                document.body.appendChild(output_results);
 
             });
         };
         getNationality();
+
+        
 
        
     };
