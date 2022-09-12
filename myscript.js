@@ -31,6 +31,7 @@ function getDogResult() {
 var predicted = 0;
 submit_button.onclick =
     function getResults() {
+        const out = document.querySelector("#output");
         //an if condition to view results once when the submit button is clicked 
         if (predicted == 0 ){
             predicted = 1;
@@ -48,7 +49,7 @@ submit_button.onclick =
                     results = "\nPredicted age is: " +a.age + "\n";
                     var y = document.createTextNode(results);
                     //appendig this result to the paragraph of all outputs
-                    output_results.appendChild(y);
+                    out.appendChild(y);
                 });
             };
             getAge();
@@ -62,7 +63,7 @@ submit_button.onclick =
                     results =  "\nPredicted gender is: " +a.gender + " with probability: " + a.probability;
                     var x = document.createTextNode(results);
                     //appendig this result to the paragraph of all outputs
-                    output_results.appendChild(x);
+                    out.appendChild(x);
                 });
             };
             getGender();
@@ -76,12 +77,7 @@ submit_button.onclick =
                     results =   "\nPredicted nationality: " +a.country[0].country_id + " with probability: " + a.country[0].probability + " or " + a.country[1].country_id + " with probability: " + a.country[1].probability;
                     var z = document.createTextNode(results);
                     //appendig this result to the paragraph of all outputs
-                    output_results.appendChild(z);
-                    //style the output paragraph
-                    output_results.classList.add("text-style");
-                    output_results.classList.add("output-para");
-                    //append the output paragraph the the body 
-                    document.body.appendChild(output_results);
+                    output.appendChild(z);  
                 });
             };
             getNationality();

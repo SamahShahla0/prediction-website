@@ -12,15 +12,59 @@
 <body>
 
     <div class="container">
-        <div class="dog-img-div" id="dog-result">
-            <p>Random dog picture</p>
-        </div>
 
-        <div class="input-div">
-            <label for="nameinput" class="text-style">Enter a name to predict gender, age and nationality: </label>
-            <input type="text" id="iname" placeholder="ex:samah" >
-            <button class="btns" id="submit-btn">Submit</button>
+        <!-- Start log in pop up -->
+        <div class="login pop-up">
+            <h2>Welcome!</h2>
+            <p class="text-style">please enter your log-in username and password here:</p>
+            <form>
+                <label for="username" class="text-style">Username:</label>
+                <input class="text-box" type="text" id="username" value="" />
+                <label for="password" class="text-style">Password:</label>
+                <input class="text-box" type="text" id="password" value="" />
+                <button class="btns" id="login-btn">LOG IN</button>
+            </form>
+            <a class="close" href="#close"></a>
         </div>
+        <!-- End log in pop up -->
+
+        <!-- Start sign up pop up -->
+        <div class="signup">
+            <h2>Sign up here:</h2>
+            <p class="text-style">please fill the following form to register:</p>
+            <form>
+                <label for="username" class="text-style">Choose username:</label>
+                <input class="text-box" type="text" id="new-username" value="" />
+                <label for="password" class="text-style">New Password:</label>
+                <input class="text-box" type="text" id="new-password" value="" />
+                <button class="btns" id="signup-btn">SIGN UP</button>
+            </form>
+            <a class="close" href="#close"></a>
+        </div>
+        <!-- End sign up pop up -->
+
+        <!-- Start prediction section -->
+        <div class="prediction-part">
+            <div class="dog-img-div" id="dog-result">
+                <p>Random dog picture</p>
+            </div>
+            <div class="input-div">
+                <label for="nameinput" class="text-style">Enter a name to predict gender, age and nationality: </label>
+                <input type="text" id="iname" placeholder="ex:samah" />
+                <button class="btns" id="submit-btn">Submit</button>
+            </div>
+            <div>
+                <p id="output text-style" ></p>
+            </div>
+        </div>
+        <!-- End prediction section -->
+
+        <!-- Start boredom section -->
+        <div class="bored">
+
+        </div>
+        <!-- nd boredom section -->
+        
         
     </div>
 
