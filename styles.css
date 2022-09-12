@@ -30,15 +30,18 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: darksalmon;
+    background-color:  darkseagreen;
     border: 0;
     border-radius: 10px;
-    color: white;
+    color: rgb(12, 11, 11);
     font-size: 20px;
     font-weight: 700;
     padding: 10px;
     margin: 10px;
-    width: 20vw;
+    width: 10vw;
+}
+.btns:hover{
+    background-color: #06D85F;
 }
 
 button:active{
@@ -64,6 +67,11 @@ button:focus{
 #output{
     font-size: 16px;
     text-align: center;
+}
+#output-div{
+    width: 600px;
+    height: 200px;
+    align-content: center;
 }
 
 .output-para{
