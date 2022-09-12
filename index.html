@@ -14,32 +14,36 @@
     <div class="container">
 
         <!-- Start log in pop up -->
-        <div class="login pop-up">
-            <h2>Welcome!</h2>
-            <p class="text-style">please enter your log-in username and password here:</p>
-            <form>
-                <label for="username" class="text-style">Username:</label>
-                <input class="text-box" type="text" id="username" value="" />
-                <label for="password" class="text-style">Password:</label>
-                <input class="text-box" type="text" id="password" value="" />
-                <button class="btns" id="login-btn">LOG IN</button>
-            </form>
-            <a class="close" href="#close"></a>
+        <div class="login popup">
+            <button>Click me to log in</button>
+            <div class="popup-content" id="mypopup" id="login-div"></div>
+                <p class="text-style">please enter your log-in username and password here:</p>
+                <form>
+                    <label for="username" class="text-style">Username:</label>
+                    <input class="text-box" type="text" id="username" value="" />
+                    <label for="password" class="text-style">Password:</label>
+                    <input class="text-box" type="text" id="password" value="" />
+                    <button class="btns" id="login-btn">LOG IN</button>
+                </form>
+                <a class="close" href="#close"></a>
+            </div>
         </div>
         <!-- End log in pop up -->
 
         <!-- Start sign up pop up -->
-        <div class="signup">
-            <h2>Sign up here:</h2>
-            <p class="text-style">please fill the following form to register:</p>
-            <form>
-                <label for="username" class="text-style">Choose username:</label>
-                <input class="text-box" type="text" id="new-username" value="" />
-                <label for="password" class="text-style">New Password:</label>
-                <input class="text-box" type="text" id="new-password" value="" />
-                <button class="btns" id="signup-btn">SIGN UP</button>
-            </form>
-            <a class="close" href="#close"></a>
+        <div class="signup popup" >
+            <button>Click me to sign Up</button>
+            <div class="popup-content" id="mypopup" id="signup-div">
+                <p>please fill the following form to register:</p>
+                <form>
+                    <label for="username" >Choose username:</label>
+                    <input class="text-box" type="text" id="new-username" value="" />
+                    <label for="password" >New Password:</label>
+                    <input class="text-box" type="text" id="new-password" value="" />
+                    <button id="signup-btn">SIGN UP</button>
+                </form>
+                <a class="close" href="#close"></a>
+            </div>
         </div>
         <!-- End sign up pop up -->
 

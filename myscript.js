@@ -1,6 +1,15 @@
 const dogResult = document.getElementById('dog-result');
 const enteredName = document.getElementById('name');
 const submit_button = document.getElementById('submit-btn');
+const signUpDiv = document.getElementById('signup-div');
+const logInDiv = document.getElementById('login-div');
+
+signUpDiv.onclick = myPopupInit();
+//pop up function
+function myPopupInit() {
+    var popup = document.getElementById("mypopup");
+    popup.classList.toggle("show");
+  }
 
 //getting the object from the api
 async function getapi(url) {
@@ -11,7 +20,7 @@ async function getapi(url) {
     return data;
 }
 
-window.addEventListener = ('load', getDogResult())
+window.addEventListener = ('load', getDogResult());
 //fetching the dog image api to show random dog image
 function getDogResult() {
     console.log('page is fully loaded');
