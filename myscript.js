@@ -1,15 +1,8 @@
 const dogResult = document.getElementById('dog-result');
 const enteredName = document.getElementById('name');
 const submit_button = document.getElementById('submit-btn');
-const signUpDiv = document.getElementById('signup-div');
-const logInDiv = document.getElementById('login-div');
+const out = document.querySelector("#output");
 
-signUpDiv.onclick = myPopupInit();
-//pop up function
-function myPopupInit() {
-    var popup = document.getElementById("mypopup");
-    popup.classList.toggle("show");
-  }
 
 //getting the object from the api
 async function getapi(url) {
@@ -40,7 +33,7 @@ function getDogResult() {
 var predicted = 0;
 submit_button.onclick =
     function getResults() {
-        const out = document.querySelector("#output");
+        
         //an if condition to view results once when the submit button is clicked 
         if (predicted == 0 ){
             predicted = 1;
@@ -86,7 +79,7 @@ submit_button.onclick =
                     results =   "\nPredicted nationality: " +a.country[0].country_id + " with probability: " + a.country[0].probability + " or " + a.country[1].country_id + " with probability: " + a.country[1].probability;
                     var z = document.createTextNode(results);
                     //appendig this result to the paragraph of all outputs
-                    output.appendChild(z);  
+                    out.appendChild(z);  
                 });
             };
             getNationality();
