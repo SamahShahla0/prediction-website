@@ -65,22 +65,23 @@ button:focus{
     text-shadow:1px 1px 10px rgb(148, 33, 119), 1px 1px 10px rgb(255, 226, 171);
 }
 #output{
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
 }
 #output-div{
-    width: 600px;
-    height: 200px;
-    align-content: center;
+    width: 60vw;
+    height: 20vh;
+    margin-left: 4vw;
 }
 
 .output-para{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10%;
-    padding-top: 0%;
+    height: 5vh;
+    margin-left: 10vw;
     padding-bottom: 3%;
+    text-align: center;
 
 }
 
@@ -105,10 +106,11 @@ h1 {
 }
 
 .box {
+    display: flex;
     width: 40%;
     margin: 0 auto;
     background: rgba(255,255,255,0.2);
-    padding: 35px;
+    padding: 30px;
     border: 2px solid #fff;
     border-radius: 20px/50px;
     background-clip: padding-box;
@@ -116,6 +118,8 @@ h1 {
 }
 
 .button {
+    display: flex;
+    flex-wrap: wrap;
     font-size: 1em;
     padding: 10px;
     color: rgb(0, 0, 0);
@@ -146,6 +150,7 @@ h1 {
 }
 
 .popup {
+    display: flex;
     margin: 70px auto;
     padding: 20px;
     background: #fff;
@@ -173,17 +178,23 @@ h1 {
     color: #06D85F;
 }
 .popup .content {
+    display: flex;
     max-height: 30%;
     overflow: auto;
 }
 
 
 /* media queries */
-@media screen and (max-width: 500px) {
-  .container {flex-direction: column;}
-  .btns{font-size: 15px;}
+@media screen and (max-width: 600px) {
+  .container {flex-wrap: wrap;flex-direction: column;}
+  .btns{font-size: small;}
   #dog-img{width:20vw;}
   .text-style{font-size: smaller;}
+  #output-div{margin-left: 20vw;}
+  #output{font-size: smaller;}
+  .popups{flex-direction: column;}
+  .box{width: 50%;}
+  .popup{width: 50%;}
 
 }
 
